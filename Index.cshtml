@@ -1,59 +1,8 @@
-﻿@model IEnumerable<ScallfoldingCrud.Models.Employee>
-
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
 
-<h1>Employee Details</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.empid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dob)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.emailid)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.empid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dob)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.emailid)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.empid }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.empid }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.empid })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p> <a href="/Employee/Index">show Employee Details</a>.</p>
+</div>
